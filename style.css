@@ -322,3 +322,123 @@ body {
     0% { transform: translateY(10px) scale(0.5); opacity: 0; }
     100% { transform: translateY(0) scale(1); opacity: 1; }
 }
+/* === DÁN ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS CỦA NÍ === */
+
+/* TỰ ĐỘNG FIX TỶ LỆ TRÊN ĐIỆN THOẠI (MÀN HÌNH NHỎ HƠN 768PX) */
+@media (max-width: 768px) {
+    /* Thu nhỏ chữ tiêu đề chính để không bị tràn dòng */
+    .main-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Thu nhỏ tiêu đề các slide */
+    .section-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Hạ cỡ chữ dẫn chuyện cho vừa mắt trên điện thoại */
+    .lead-text {
+        font-size: 1.2rem !important;
+    }
+    
+    .story-text {
+        font-size: 1.1rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Thu nhỏ badge ngày tháng */
+    .date-badge {
+        font-size: 1rem !important;
+        padding: 6px 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Thu nhỏ hộp chữ bày tỏ */
+    .story-box {
+        padding: 25px 15px !important;
+    }
+    
+    .highlight-text {
+        font-size: 1.3rem !important;
+        margin-top: 15px !important;
+        padding-top: 15px !important;
+    }
+
+    /* 🗓️ ÉP CÁI LỊCH THU NHỎ LẠI ĐỂ KHÔNG BỊ BỂ KHUNG */
+    .dark-calendar {
+        padding: 20px 12px !important;
+        max-width: 100% !important; /* Cho phép lịch co giãn theo chiều ngang điện thoại */
+    }
+    .cal-month {
+        font-size: 1.3rem !important;
+    }
+    .week-name {
+        font-size: 1rem !important;
+    }
+    .day-num, .day-off {
+        font-size: 1rem !important;
+        padding: 4px 0 !important;
+    }
+    
+    /* Thu nhỏ chấm tròn chạy lịch cho vừa với ô số đã thu nhỏ */
+    .running-dot-nail, .running-dot-date {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    /* Thu nhỏ icon popup bay lên */
+    .pop-icon {
+        top: -16px !important;
+        font-size: 1.2rem !important;
+    }
+
+    /* Thu nhỏ khung ảnh tiệm nail và nhà hàng Mango */
+    .single-image-card, .restaurant-display-card {
+        max-width: 100% !important;
+    }
+    .pure-img {
+        max-height: 250px !important;
+    }
+    .pure-img-rest {
+        max-height: 200px !important;
+    }
+    .rest-details-box {
+        padding: 20px 15px !important;
+    }
+    .rest-time-highlight {
+        font-size: 1.2rem !important;
+        margin-top: 10px !important;
+    }
+
+    /* Thu nhỏ hộp quà bí mật */
+    .minimal-gifts {
+        gap: 15px !important;
+    }
+    .gift-outline-box {
+        padding: 15px 25px !important;
+        font-size: 1.8rem !important;
+    }
+    .gift-outline-box span {
+        font-size: 0.9rem !important;
+    }
+
+    /* Thu nhỏ album kết thúc */
+    .clean-album-box {
+        padding: 20px !important;
+    }
+    .album-dashed-slot {
+        height: 100px !important;
+        font-size: 1.8rem !important;
+    }
+    .album-quote {
+        font-size: 1.2rem !important;
+    }
+    .icon-heart {
+        font-size: 3rem !important;
+    }
+    .scroll-down-hint {
+        font-size: 1.8rem !important;
+    }
+}
