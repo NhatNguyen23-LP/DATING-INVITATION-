@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Journey ✨</title>
+    <!-- Hiệu ứng xuất hiện phần tử AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Phông chữ cao cấp -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scroll-container">
+        <!-- SLIDE 1: LỜI CHÀO -->
+        <section class="fullscreen-section bg-luxury-1">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="zoom-in">
+                <div class="icon-heart"><i class="fa-solid fa-heart"></i></div>
+                <h1 class="main-title">Chào bé yêu của anh... ❤️</h1>
+                <p class="lead-text">Anh có một bí mật nhỏ được thiết kế riêng cho em. Hãy lướt xuống để khám phá nhé!</p>
+                <div class="scroll-down-hint"><i class="fa-solid fa-angles-down"></i></div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: LỜI BÀY TỎ -->
+        <section class="fullscreen-section bg-luxury-2">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <span class="date-badge">12 / 06</span>
+                <h2 class="section-title">Nơi Mọi Thứ Bắt Đầu...</h2>
+                <div class="story-box">
+                    <p class="story-text">Từ ngày 12/6 - ngày đầu tiên hai đứa mình chính thức nói chuyện, anh biết cuộc sống của anh đã có một sự tuyệt vời. Qua thời gian vừa rồi bên em, cùng với sự chấp thuận từ gia đình hai bên...</p>
+                    <p class="highlight-text">Anh muốn có một buổi hẹn thật chính thức, thật hoành tráng để đưa mối quan hệ của tụi mình sang một trang mới. Em đã sẵn sàng bước cùng anh chưa?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: LỊCH SỰ KIỆN 1 (NAIL DAY) -->
+        <section class="fullscreen-section bg-luxury-3" id="nail-calendar-section">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <h2 class="section-title">Lịch Trình Tháng 7</h2>
+                <p class="lead-text mb-30">Cột mốc đầu tiên bất ngờ dành cho em...</p>
+                
+                <div class="dark-calendar">
+                    <div class="cal-header">
+                        <span class="cal-month">July 2026</span>
+                        <div class="cal-arrows"><i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></div>
+                    </div>
+                    <div class="cal-grid" id="grid-nail">
+                        <div class="week-name">Su</div><div class="week-name">Mo</div><div class="week-name">Tu</div><div class="week-name">We</div><div class="week-name">Th</div><div class="week-name">Fr</div><div class="week-name">Sa</div>
+                        
+                        <div class="day-off">28</div><div class="day-off">29</div><div class="day-off">30</div>
+                        
+                        <!-- CHỖ NÀY ĐÃ SỬA: Đủ full thuộc tính data-day từ 1 đến 31 để chấm tròn nhận diện -->
+                        <div class="day-num" data-day="1">1</div><div class="day-num" data-day="2">2</div><div class="day-num" data-day="3">3</div><div class="day-num" data-day="4">4</div>
+                        <div class="day-num" data-day="5">5</div><div class="day-num" data-day="6">6</div><div class="day-num" data-day="7">7</div><div class="day-num" data-day="8">8</div><div class="day-num" data-day="9">9</div><div class="day-num" data-day="10">10</div><div class="day-num" data-day="11">11</div>
+                        <div class="day-num" data-day="12">12</div><div class="day-num" data-day="13">13</div><div class="day-num" data-day="14">14</div><div class="day-num" data-day="15">15</div><div class="day-num" data-day="16">16</div><div class="day-num" data-day="17">17</div><div class="day-num" data-day="18">18</div>
+                        <div class="day-num" data-day="19">19</div><div class="day-num" data-day="20">20</div>
+                        <div class="day-num" data-day="21">21<span class="pop-icon">💅</span></div>
+                        <div class="day-num" data-day="22">22</div><div class="day-num" data-day="23">23</div><div class="day-num" data-day="24">24</div><div class="day-num" data-day="25">25</div>
+                        <div class="day-num" data-day="26">26</div><div class="day-num" data-day="27">27</div><div class="day-num" data-day="28">28</div><div class="day-num" data-day="29">29</div><div class="day-num" data-day="30">30</div><div class="day-num" data-day="31">31</div>
+                        <div class="day-off">1</div>
+                    </div>
+                </div>
+
+                <p class="story-text mt-20">Sẽ là ngày tút tát lại nhan sắc cho đôi bàn tay xinh xắn của em nè!</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: CHI TIẾT TIỆM NAIL -->
+        <section class="fullscreen-section bg-luxury-4">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <h2 class="section-title">Nail Day Của Công Chúa</h2>
+                <p class="lead-text mb-30">Anh đã đặt lịch ở tiệm Trâm Beauty không gian siêu ấm cúng này rồi nhé:</p>
+                
+                <div class="single-image-card">
+                    <img src="nail.png" alt="Nail Salon" class="pure-img">
+                    <h3 class="box-sub-title">Không gian tiệm cực xinh và nhẹ nhàng 🌸</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: LỊCH SỰ KIỆN 2 (BIG DATE) -->
+        <section class="fullscreen-section bg-luxury-3" id="date-calendar-section">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <h2 class="section-title">Và Ngày Quan Trọng Nhất...</h2>
+                
+                <div class="dark-calendar">
+                    <div class="cal-header">
+                        <span class="cal-month">July 2026</span>
+                        <div class="cal-arrows"><i class="fa-solid fa-caret-up"></i><i class="fa-solid fa-caret-down"></i></div>
+                    </div>
+                    <div class="cal-grid" id="grid-date">
+                        <div class="week-name">Su</div><div class="week-name">Mo</div><div class="week-name">Tu</div><div class="week-name">We</div><div class="week-name">Th</div><div class="week-name">Fr</div><div class="week-name">Sa</div>
+                        <div class="day-off">28</div><div class="day-off">29</div><div class="day-off">30</div>
+                        
+                        <div class="day-num" data-day="1">1</div><div class="day-num" data-day="2">2</div><div class="day-num" data-day="3">3</div><div class="day-num" data-day="4">4</div>
+                        <div class="day-num" data-day="5">5</div><div class="day-num" data-day="6">6</div><div class="day-num" data-day="7">7</div><div class="day-num" data-day="8">8</div><div class="day-num" data-day="9">9</div><div class="day-num" data-day="10">10</div><div class="day-num" data-day="11">11</div>
+                        <div class="day-num" data-day="12">12</div><div class="day-num" data-day="13">13</div><div class="day-num" data-day="14">14</div><div class="day-num" data-day="15">15</div><div class="day-num" data-day="16">16</div><div class="day-num" data-day="17">17</div><div class="day-num" data-day="18">18</div>
+                        <div class="day-num" data-day="19">19</div><div class="day-num" data-day="20">20</div><div class="day-num" data-day="21">21</div><div class="day-num" data-day="22">22</div>
+                        <div class="day-num" data-day="23">23<span class="pop-icon">❤️</span></div>
+                        <div class="day-num" data-day="24">24</div><div class="day-num" data-day="25">25</div>
+                        <div class="day-num" data-day="26">26</div><div class="day-num" data-day="27">27</div><div class="day-num" data-day="28">28</div><div class="day-num" data-day="29">29</div><div class="day-num" data-day="30">30</div><div class="day-num" data-day="31">31</div>
+                        <div class="day-off">1</div>
+                    </div>
+                </div>
+
+                <p class="story-text mt-20">Ngày đặc biệt của hai đứa mình! Mình sẽ cùng đi chụp ảnh Photo Booth lưu giữ kỷ niệm và đi ăn một bữa thật ngon!</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: NHÀ HÀNG MANGO RESTAURANT -->
+        <section class="fullscreen-section bg-luxury-5">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <h2 class="section-title" style="letter-spacing: 2px;">MANGO RESTAURANT</h2>
+                <p class="lead-text mb-20"><i class="fa-solid fa-location-dot"></i> Võ Thị Sáu, Biên Hòa, Đồng Nai</p>
+                
+                <div class="restaurant-display-card">
+                    <img src="mango.png" alt="Mango Restaurant" class="pure-img-rest">
+                    <div class="rest-details-box">
+                        <p class="story-text">Một không gian cực kỳ ấm cúng và lãng mạn đã được anh đặt trước để hai đứa mình có những phút giây trọn vẹn nhất bên nhau.</p>
+                        <p class="rest-time-highlight">19:00 — Ngày 23 Tháng 7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: QUÀ BÍ MẬT -->
+        <section class="fullscreen-section bg-luxury-6">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <h2 class="section-title">Món Quà Bí Mật 🎁</h2>
+                <p class="lead-text">Hôm đó anh sẽ bật mí cho em... <span style="color: #ff80ab; font-weight: 600;">2 món quà</span> cực kỳ đặc biệt!</p>
+                
+                <div class="minimal-gifts">
+                    <div class="gift-outline-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Gift 1</span>
+                    </div>
+                    <div class="gift-outline-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Gift 2</span>
+                    </div>
+                </div>
+                <p class="stay-tuned">Tới hôm đó gặp rồi sẽ biết nha em yêu, giờ bí mật lêu lêu 😜</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: KẾT THÚC & ALBUM -->
+        <section class="fullscreen-section bg-luxury-7">
+            <div class="overlay-dark"></div>
+            <div class="content-fluid" data-aos="fade-up">
+                <h2 class="section-title">Cảm ơn bé đã đến bên anh... 💕</h2>
+                <p class="lead-text mb-30">Anh mong rằng ngày 23 tới đây sẽ là cột mốc chính thức, hoành tráng và đáng nhớ nhất của tụi mình.</p>
+                
+                <div class="clean-album-box">
+                    <div class="album-dashed-slot">
+                        <i class="fa-regular fa-image"></i>
+                        <p style="font-size: 0.9rem; margin-top: 5px; opacity: 0.6;">Our Next Chapters...</p>
+                    </div>
+                    <p class="album-quote">"Hy vọng sau ngày hôm ấy, chúng ta sẽ cùng nhau lấp đầy chiếc album cuộc đời của cả hai đứa mình nhé! Hí hí 🥰"</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Thư viện hiệu ứng AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
