@@ -322,6 +322,108 @@ body {
     0% { transform: translateY(10px) scale(0.5); opacity: 0; }
     100% { transform: translateY(0) scale(1); opacity: 1; }
 }
+/* THIẾT KẾ KHUNG THIỆP CHUYÊN NGHIỆP SLIDE CUỐI */
+.single-image-card, .restaurant-display-card, .dark-calendar, .story-box {
+    margin-bottom: 0px;
+}
+.premium-invitation-container {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+}
+.premium-invitation-card {
+    background: rgba(18, 18, 18, 0.9) !important;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 128, 171, 0.25) !important;
+    box-shadow: 0 0 30px rgba(255, 128, 171, 0.15), inset 0 0 20px rgba(0,0,0,0.6) !important;
+    padding: 40px 35px;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+.invitation-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.gold-icon {
+    font-size: 2.5rem;
+    color: #ff80ab;
+    margin-bottom: 10px;
+}
+.invitation-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.sub-invitation {
+    font-size: 0.9rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 5px;
+}
+.invitation-to {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+}
+.target-princess {
+    color: #ff80ab;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+}
+.invitation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.info-label {
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: 500;
+}
+.info-label i {
+    color: #ff80ab;
+    margin-right: 6px;
+    width: 16px;
+}
+.info-value {
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.invitation-promise {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ff80ab;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Fix responsive cho thiệp mời trên điện thoại */
+@media (max-width: 768px) {
+    .premium-invitation-card {
+        padding: 25px 20px !important;
+        max-width: 310px !important;
+    }
+    .invitation-header h2 { font-size: 1.3rem !important; }
+    .gold-icon { font-size: 1.8rem !important; }
+    .invitation-to { font-size: 1rem !important; }
+    .target-princess { font-size: 1.15rem !important; }
+    .info-value { font-size: 0.95rem !important; }
+    .invitation-promise { font-size: 1rem !important; }
+}
 
 /* =======================================================
    HỆ THỐNG RESPONSIVE CHUYỂN ĐỔI THU NHỎ TRÊN MOBILE
