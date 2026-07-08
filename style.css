@@ -322,98 +322,116 @@ body {
     0% { transform: translateY(10px) scale(0.5); opacity: 0; }
     100% { transform: translateY(0) scale(1); opacity: 1; }
 }
-/* === DÁN ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS CỦA NÍ === */
+/* === THAY THẾ ĐOẠN @MEDIA CŨ Ở CUỐI FILE STYLE.CSS BẰNG ĐOẠN NÀY === */
 
-/* TỰ ĐỘNG FIX TỶ LỆ TRÊN ĐIỆN THOẠI (MÀN HÌNH NHỎ HƠN 768PX) */
 @media (max-width: 768px) {
-    /* Thu nhỏ chữ tiêu đề chính để không bị tràn dòng */
+    /* 🚀 ĐẢM BẢO KHÔNG TRÀN NỘI DUNG */
+    .fullscreen-section {
+        padding: 10px !important;
+        overflow: hidden !important; /* Cắt bỏ phần thừa, không cho tràn sang slide khác */
+    }
+
+    /* Thu nhỏ khung chứa nội dung */
+    .content-fluid {
+        max-width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* CHỮ TIÊU ĐỀ: Thu nhỏ lại để vừa vặn màn hình dọc */
     .main-title {
-        font-size: 2.2rem !important;
-        margin-bottom: 15px;
-    }
-    
-    /* Thu nhỏ tiêu đề các slide */
-    .section-title {
-        font-size: 1.8rem !important;
-        margin-bottom: 15px;
-    }
-    
-    /* Hạ cỡ chữ dẫn chuyện cho vừa mắt trên điện thoại */
-    .lead-text {
-        font-size: 1.2rem !important;
-    }
-    
-    .story-text {
-        font-size: 1.1rem !important;
-        line-height: 1.5 !important;
-    }
-    
-    /* Thu nhỏ badge ngày tháng */
-    .date-badge {
-        font-size: 1rem !important;
-        padding: 6px 20px !important;
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
         margin-bottom: 15px !important;
     }
-    
-    /* Thu nhỏ hộp chữ bày tỏ */
-    .story-box {
-        padding: 25px 15px !important;
+    .section-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 12px !important;
     }
-    
+    .box-sub-title {
+        font-size: 1.1rem !important;
+        margin-top: 10px !important;
+    }
+
+    /* CHỮ NỘI DUNG: Thu gọn kích cỡ để không đẩy khung */
+    .lead-text {
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+    }
+    .story-text {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* SLIDE LỜI BÀY TỎ */
+    .date-badge {
+        font-size: 0.9rem !important;
+        padding: 5px 20px !important;
+        margin-bottom: 15px !important;
+    }
+    .story-box {
+        padding: 20px 15px !important;
+    }
     .highlight-text {
-        font-size: 1.3rem !important;
+        font-size: 1.15rem !important;
         margin-top: 15px !important;
         padding-top: 15px !important;
     }
 
-    /* 🗓️ ÉP CÁI LỊCH THU NHỎ LẠI ĐỂ KHÔNG BỊ BỂ KHUNG */
+    /* 🗓️ THU NHỎ LỊCH ĐỂ KHÔNG ĐẨY CHỮ */
     .dark-calendar {
-        padding: 20px 12px !important;
-        max-width: 100% !important; /* Cho phép lịch co giãn theo chiều ngang điện thoại */
+        padding: 15px 10px !important;
+        margin: 0 auto !important;
+        max-width: 320px !important; /* Thu hẹp chiều ngang lịch vừa vặn điện thoại */
+    }
+    .cal-header {
+        margin-bottom: 15px !important;
     }
     .cal-month {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
+    }
+    .cal-grid {
+        row-gap: 12px !important; /* Thu hẹp khoảng cách giữa các hàng trong lịch */
     }
     .week-name {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
     }
     .day-num, .day-off {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
         padding: 4px 0 !important;
     }
-    
-    /* Thu nhỏ chấm tròn chạy lịch cho vừa với ô số đã thu nhỏ */
+
+    /* Thu nhỏ chấm tròn chạy lịch */
     .running-dot-nail, .running-dot-date {
         width: 28px !important;
         height: 28px !important;
     }
-    
-    /* Thu nhỏ icon popup bay lên */
     .pop-icon {
-        top: -16px !important;
-        font-size: 1.2rem !important;
+        top: -14px !important;
+        font-size: 1.1rem !important;
     }
 
-    /* Thu nhỏ khung ảnh tiệm nail và nhà hàng Mango */
-    .single-image-card, .restaurant-display-card {
-        max-width: 100% !important;
-    }
+    /* KHOẢNG CÁCH CÁC PHẦN KHÁC */
+    .mb-30 { margin-bottom: 15px !important; }
+    .mt-20 { margin-top: 10px !important; }
+
+    /* KHUNG HÌNH ẢNH TIỆM NAIL & MANGO */
     .pure-img {
-        max-height: 250px !important;
-    }
-    .pure-img-rest {
         max-height: 200px !important;
     }
+    .pure-img-rest {
+        max-height: 160px !important;
+    }
     .rest-details-box {
-        padding: 20px 15px !important;
+        padding: 15px !important;
     }
     .rest-time-highlight {
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
         margin-top: 10px !important;
     }
 
-    /* Thu nhỏ hộp quà bí mật */
+    /* HỘP QUÀ */
     .minimal-gifts {
+        margin: 20px 0 !important;
         gap: 15px !important;
     }
     .gift-outline-box {
@@ -421,24 +439,27 @@ body {
         font-size: 1.8rem !important;
     }
     .gift-outline-box span {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
     }
 
-    /* Thu nhỏ album kết thúc */
+    /* ALBUM KẾT THÚC */
     .clean-album-box {
-        padding: 20px !important;
+        padding: 15px !important;
     }
     .album-dashed-slot {
-        height: 100px !important;
+        height: 80px !important;
         font-size: 1.8rem !important;
+        margin-bottom: 15px !important;
     }
     .album-quote {
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
     }
     .icon-heart {
-        font-size: 3rem !important;
+        font-size: 2.5rem !important;
+        margin-bottom: 15px !important;
     }
     .scroll-down-hint {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
+        margin-top: 15px !important;
     }
 }
