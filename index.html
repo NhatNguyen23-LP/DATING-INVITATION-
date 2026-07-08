@@ -8,10 +8,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Icon FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Phông chữ cao cấp -->
+    <!-- Phông chữ cao cấp gốc -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2 family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
         </section>
 
         <!-- SLIDE 3: LỊCH SỰ KIỆN 1 (NAIL DAY) -->
-        <section class="fullscreen-section bg-luxury-3" id="nail-calendar-section">
+        <section class="fullscreen-section bg-calendar-section" id="nail-calendar-section">
             <div class="overlay-dark"></div>
             <div class="content-fluid" data-aos="fade-up">
                 <h2 class="section-title">Lịch Trình Tháng 7</h2>
@@ -58,7 +58,6 @@
                         
                         <div class="day-off">28</div><div class="day-off">29</div><div class="day-off">30</div>
                         
-                        <!-- CHỖ NÀY ĐÃ SỬA: Đủ full thuộc tính data-day từ 1 đến 31 để chấm tròn nhận diện -->
                         <div class="day-num" data-day="1">1</div><div class="day-num" data-day="2">2</div><div class="day-num" data-day="3">3</div><div class="day-num" data-day="4">4</div>
                         <div class="day-num" data-day="5">5</div><div class="day-num" data-day="6">6</div><div class="day-num" data-day="7">7</div><div class="day-num" data-day="8">8</div><div class="day-num" data-day="9">9</div><div class="day-num" data-day="10">10</div><div class="day-num" data-day="11">11</div>
                         <div class="day-num" data-day="12">12</div><div class="day-num" data-day="13">13</div><div class="day-num" data-day="14">14</div><div class="day-num" data-day="15">15</div><div class="day-num" data-day="16">16</div><div class="day-num" data-day="17">17</div><div class="day-num" data-day="18">18</div>
@@ -79,17 +78,22 @@
             <div class="overlay-dark"></div>
             <div class="content-fluid" data-aos="fade-up">
                 <h2 class="section-title">Nail Day Của Công Chúa</h2>
-                <p class="lead-text mb-30">Anh đã đặt lịch ở tiệm Trâm Beauty không gian siêu ấm cúng này rồi nhé:</p>
+                <p class="lead-text mb-30">Anh đặt lịch ở Trâm Beauty để em tút tát lại đôi tay xinh xắn rồi nè:</p>
                 
                 <div class="single-image-card">
                     <img src="nail.png" alt="Nail Salon" class="pure-img">
-                    <h3 class="box-sub-title">Không gian tiệm cực xinh và nhẹ nhàng 🌸</h3>
+                    <div class="menu-text-box">
+                        <h3>Nail Ẻm Chọn ✨</h3>
+                        <div class="menu-line"></div>
+                        <p>💅 Hôm đó anh đã chọn bộ nail mà em thích rồi nên lên là chỉ việc làm thôi nhé .</p>
+                        <p>🌸 Anh lo từ A-Z hết rồi, công chúa chỉ việc đến thư giãn, làm bộ móng thật xinh đẹp thui nè!</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- SLIDE 5: LỊCH SỰ KIỆN 2 (BIG DATE) -->
-        <section class="fullscreen-section bg-luxury-3" id="date-calendar-section">
+        <section class="fullscreen-section bg-calendar-section" id="date-calendar-section">
             <div class="overlay-dark"></div>
             <div class="content-fluid" data-aos="fade-up">
                 <h2 class="section-title">Và Ngày Quan Trọng Nhất...</h2>
@@ -128,7 +132,13 @@
                 <div class="restaurant-display-card">
                     <img src="mango.png" alt="Mango Restaurant" class="pure-img-rest">
                     <div class="rest-details-box">
-                        <p class="story-text">Một không gian cực kỳ ấm cúng và lãng mạn đã được anh đặt trước để hai đứa mình có những phút giây trọn vẹn nhất bên nhau.</p>
+                        <h3>MANGO MENU ĐẶT TRƯỚC 🍽️</h3>
+                        <div class="menu-line"></div>
+                        <p>🥗 Salad rau tổng hợp với xốt chanh dây</p>
+                        <p>🍄 Nấm kim châm tẩm bột chiên giòn</p>
+                        <p>🥩 Sườn heo nướng BBQ đậm vị</p>
+                        <p>🧀 Cơm chiên hải sản phô mai béo ngậy</p>
+                        <div class="menu-line"></div>
                         <p class="rest-time-highlight">19:00 — Ngày 23 Tháng 7</p>
                     </div>
                 </div>
@@ -170,8 +180,8 @@
                     </div>
                     <p class="album-quote">"Hy vọng sau ngày hôm ấy, chúng ta sẽ cùng nhau lấp đầy chiếc album cuộc đời của cả hai đứa mình nhé! Hí hí 🥰"</p>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 
     <!-- Thư viện hiệu ứng AOS -->
