@@ -2,459 +2,222 @@
    💎 BẢN SỬA LỖI MẤT HÌNH NỀN - ĐỒNG BỘ GIAO DIỆN HÀI HÒA 100% 💎
    ======================================================= */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-html {
-    scroll-snap-type: y mandatory; 
-    scroll-behavior: smooth;
-}
-body {
-    font-family: 'Montserrat', sans-serif; /* Giữ font nền Montserrat sạch sẽ của ní */
-    color: #ffffff;
-    background-color: #050505; 
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; color: #ffffff; background-color: #050505; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
-/* THIẾT KẾ SECTION TRÀN VIỀN ĐỒNG BỘ */
-.fullscreen-section {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 20px;
-    background-size: cover;
-    background-position: center;
-    scroll-snap-align: start; 
-    scroll-snap-stop: always; 
-    border-bottom: 1px solid #111111;
-    overflow: hidden;
-}
+.fullscreen-section { position: relative; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; padding: 30px 20px; background-size: cover; background-position: center; scroll-snap-align: start; scroll-snap-stop: always; border-bottom: 1px solid #111111; overflow: hidden; }
 
-/* LỚP PHỦ NỀN GRADIENT ĐỒNG NHẤT KHÔNG CHE CHỮ */
-.overlay-dark {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(0,0,0,0.55) 0%, rgba(5,5,5,0.92) 85%);
-    z-index: 1;
-}
+.overlay-dark { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(0,0,0,0.55) 0%, rgba(5,5,5,0.92) 85%); z-index: 1; pointer-events: none; }
+.content-fluid { position: relative; z-index: 10 !important; max-width: 95%; width: 100%; text-align: center; }
 
-/* KHUNG NỘI DUNG CHÍNH NỔI TRÊN NỀN */
-.content-fluid {
-    position: relative;
-    z-index: 10 !important; /* Ép chữ nổi lên trên lớp phủ đen */
-    max-width: 95%;
-    width: 100%;
-    text-align: center;
-}
-
-/* 🚀 FIX ĐỒNG BỘ KHO HÌNH NỀN LUXURY GỐC CHUẨN XÁC CHẤT LƯỢNG CAO */
+/* 🚀 KHO HÌNH NỀN LUXURY GỐC */
 .bg-luxury-1 { background-image: url('https://images.unsplash.com/photo-1507504038482-7621abf8c325?auto=format&fit=crop&w=1200&q=80'); }
 .bg-luxury-2 { background-image: url('https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&w=1200&q=80'); }
-/* Fix lỗi gọi sai class của slide lịch trình */
 .bg-calendar-section, .bg-luxury-3 { background-image: url('https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?auto=format&fit=crop&w=1200&q=80'); }
 .bg-luxury-4 { background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80'); }
 .bg-luxury-5 { background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80'); }
 .bg-luxury-6 { background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80'); }
 .bg-luxury-7 { background-image: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80'); }
+.bg-galaxy { background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80'); }
 
-/* TYPOGRAPHY CHUẨN GỐC SANG TRỌNG */
-.main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 25px;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.8);
-}
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    letter-spacing: 0.5px;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.8);
-}
-.lead-text {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #cccccc;
-    font-weight: 300;
-}
-.story-text {
-    font-size: 1.35rem;
-    line-height: 1.7;  
-    color: #f0f0f0;
-    font-weight: 300;
-}
+/* TYPOGRAPHY */
+.main-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; line-height: 1.3; margin-bottom: 25px; text-shadow: 0 4px 12px rgba(0,0,0,0.8); }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; margin-bottom: 25px; letter-spacing: 0.5px; text-shadow: 0 4px 12px rgba(0,0,0,0.8); }
+.lead-text { font-size: 1.5rem; line-height: 1.6; color: #cccccc; font-weight: 300; }
+.story-text { font-size: 1.35rem; line-height: 1.7; color: #f0f0f0; font-weight: 300; }
+.mb-30 { margin-bottom: 30px; } .mb-20 { margin-bottom: 20px; } .mt-20 { margin-top: 20px; }
 
-.mb-30 { margin-bottom: 30px; }
-.mb-20 { margin-bottom: 20px; }
-.mt-20 { margin-top: 20px; }
+/* CÁC HỘP CHỨA NỘI DUNG */
+.story-box, .dark-calendar, .single-image-card, .restaurant-display-card, .clean-album-box { background: rgba(15, 15, 15, 0.8) !important; border-radius: 12px !important; border: 1px solid rgba(255,255,255,0.08) !important; box-shadow: 0 20px 45px rgba(0,0,0,0.55) !important; backdrop-filter: blur(10px); margin: 0 auto; }
+.story-box, .dark-calendar, .clean-album-box { width: 100%; max-width: 520px; }
 
-/* ĐỒNG BỘ CÁC HỘP CHỨA NỘI DUNG */
-.story-box, .dark-calendar, .single-image-card, .restaurant-display-card, .clean-album-box {
-    background: rgba(15, 15, 15, 0.8) !important; 
-    border-radius: 12px !important;               
-    border: 1px solid rgba(255,255,255,0.08) !important; 
-    box-shadow: 0 20px 45px rgba(0,0,0,0.55) !important;  
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    margin: 0 auto;
-}
-
-.story-box, .dark-calendar, .clean-album-box {
-    width: 100%;
-    max-width: 520px;
-}
-
-/* SLIDE LỜI BÀY TỎ */
-.date-badge {
-    border: 1px solid rgba(255,255,255,0.6);
-    color: white;
-    padding: 8px 35px;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 1.2rem;
-    display: inline-block;
-    margin-bottom: 30px;
-    letter-spacing: 3px;
-}
-.story-box {
-    padding: 45px 30px;
-}
-.highlight-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.7rem;
-    color: #ff80ab;
-    border-top: 1px dashed rgba(255,255,255,0.15);
-    padding-top: 25px;
-    margin-top: 25px;
-    line-height: 1.5;
-}
+/* LỜI BÀY TỎ */
+.date-badge { border: 1px solid rgba(255,255,255,0.6); color: white; padding: 8px 35px; border-radius: 4px; font-weight: 500; font-size: 1.2rem; display: inline-block; margin-bottom: 30px; letter-spacing: 3px; }
+.story-box { padding: 45px 30px; }
+.highlight-text { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #ff80ab; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 25px; margin-top: 25px; line-height: 1.5; }
 
 /* ĐỊNH DẠNG LỊCH */
-.dark-calendar {
-    padding: 40px 25px;
-}
-.cal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 0 10px;
-}
-.cal-month {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-.cal-arrows {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 1.2rem;
-    color: #555;
-}
-.cal-grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    row-gap: 25px;
-    column-gap: 10px;
-    text-align: center;
-}
-.week-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.4);
-    font-family: 'Playfair Display', serif;
-    padding-bottom: 10px;
-}
-.day-num {
-    font-size: 1.2rem;
-    color: #ffffff;
-    padding: 8px 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-.day-off {
-    font-size: 1.2rem;
-    color: #333333;
-    padding: 8px 0;
-}
-
-/* CHẤM CHẠY ĐỘNG */
-.running-dot-nail, .running-dot-date {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    transition: left 0.18s cubic-bezier(0.25, 1, 0.5, 1), top 0.18s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.running-dot-nail { background-color: #ff3366; }
-.running-dot-date { background-color: #555555; }
-.nail-reached { background-color: #ff3366; border-radius: 50%; font-weight: bold; }
-.date-reached { background-color: #555555; border-radius: 50%; font-weight: bold; }
+.dark-calendar { padding: 40px 25px; }
+.cal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding: 0 10px; }
+.cal-month { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; }
+.cal-arrows { display: flex; flex-direction: column; gap: 6px; font-size: 1.2rem; color: #555; }
+.cal-grid { position: relative; display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 25px; column-gap: 10px; text-align: center; }
+.week-name { font-size: 1.2rem; font-weight: 600; color: rgba(255,255,255,0.4); font-family: 'Playfair Display', serif; padding-bottom: 10px; }
+.day-num { font-size: 1.2rem; color: #ffffff; padding: 8px 0; position: relative; display: flex; justify-content: center; align-items: center; z-index: 2; }
+.day-off { font-size: 1.2rem; color: #333333; padding: 8px 0; }
+.running-dot-nail, .running-dot-date { position: absolute; width: 40px; height: 40px; border-radius: 50%; z-index: 1; transform: translate(-50%, -50%); transition: left 0.18s cubic-bezier(0.25, 1, 0.5, 1), top 0.18s cubic-bezier(0.25, 1, 0.5, 1); }
+.running-dot-nail { background-color: #ff3366; } .running-dot-date { background-color: #555555; }
+.nail-reached { background-color: #ff3366; border-radius: 50%; font-weight: bold; } .date-reached { background-color: #555555; border-radius: 50%; font-weight: bold; }
 .pop-icon { position: absolute; top: -24px; font-size: 1.8rem; opacity: 0; }
 .show-pop { animation: popUp 0.6s ease forwards; }
 
-/* CARD CHIA ĐÔI CHO SLIDE MENU */
-.single-image-card, .restaurant-display-card {
-    max-width: 950px; 
-    display: flex; 
-    align-items: stretch;
-    overflow: hidden;
-}
+/* CARD SLIDE MENU */
+.single-image-card, .restaurant-display-card { max-width: 950px; display: flex; align-items: stretch; overflow: hidden; }
+.pure-img, .pure-img-rest { width: 48% !important; height: 450px !important; object-fit: cover; display: block; }
+.menu-text-box, .rest-details-box { width: 52% !important; padding: 45px 40px; text-align: left !important; display: flex; flex-direction: column; justify-content: center; }
+.menu-text-box h3, .rest-details-box h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #ff80ab; margin-bottom: 20px; letter-spacing: 1px; font-weight: 700; }
+.menu-text-box p, .rest-details-box p { font-size: 1.3rem; line-height: 1.9; color: #e5e5e5; margin-bottom: 12px; font-weight: 400; }
+.menu-line { border-top: 1px dashed rgba(255,255,255,0.15); margin: 15px 0; }
+.rest-time-highlight { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #ff80ab; margin-top: 15px; font-weight: 700; }
 
-.pure-img, .pure-img-rest {
-    width: 48% !important; 
-    height: 450px !important;
-    object-fit: cover;
-    display: block;
-}
-
-.menu-text-box, .rest-details-box {
-    width: 52% !important; 
-    padding: 45px 40px; 
-    text-align: left !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.menu-text-box h3, .rest-details-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #ff80ab;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-.menu-text-box p, .rest-details-box p {
-    font-size: 1.3rem; 
-    line-height: 1.9; 
-    color: #e5e5e5;
-    margin-bottom: 12px;
-    font-weight: 400;
-}
-
-.menu-line {
-    border-top: 1px dashed rgba(255,255,255,0.15);
-    margin: 15px 0;
-}
-
-.menu-note {
-    font-size: 0.95rem;
-    color: #888;
-    font-style: italic;
-    line-height: 1.5;
-}
-
-.rest-time-highlight {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    color: #ff80ab;
-    margin-top: 15px;
-    font-weight: 700;
-}
-
-/* HỘP QUÀ TỐI GIẢN TO */
-.minimal-gifts {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 40px 0;
-}
-.gift-outline-box {
-    border: 1px dashed rgba(255,255,255,0.2);
-    padding: 30px 50px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 2.5rem;
-    color: #444;
-    background: rgba(255,255,255,0.01);
-}
+/* HỘP QUÀ */
+.minimal-gifts { display: flex; justify-content: center; gap: 40px; margin: 40px 0; }
+.gift-outline-box { border: 1px dashed rgba(255,255,255,0.2); padding: 30px 50px; border-radius: 8px; display: flex; flex-direction: column; gap: 15px; font-size: 2.5rem; color: #444; background: rgba(255,255,255,0.01); }
 .gift-outline-box span { font-size: 1.1rem; color: #888; font-family: 'Playfair Display', serif; }
 .stay-tuned { font-style: italic; font-size: 1.2rem; color: #555; }
 
-/* ALBUM KẾT THÚC */
-.clean-album-box {
-    padding: 40px;
-}
-.album-dashed-slot {
-    height: 140px;
-    border: 1px dashed rgba(255,255,255,0.15);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #444;
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-}
-.album-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: #ff80ab;
-    line-height: 1.6;
-}
+/* ALBUM */
+.clean-album-box { padding: 40px; }
+.album-dashed-slot { height: 140px; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; display: flex; flex-direction: column; justify-content: center; color: #444; font-size: 2.5rem; margin-bottom: 25px; }
+.album-quote { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #ff80ab; line-height: 1.6; }
 
-/* KEYFRAMES */
+/* KEYFRAMES GỐC */
 .icon-heart { font-size: 4.5rem; color: #ff3366; margin-bottom: 25px; animation: heartbeat 1.5s infinite; }
 .scroll-down-hint { font-size: 2rem; margin-top: 30px; animation: bounce 1.5s infinite; color: rgba(255,255,255,0.2); }
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes popUp {
-    0% { transform: translateY(10px) scale(0.5); opacity: 0; }
-    100% { transform: translateY(0) scale(1); opacity: 1; }
-}
-/* THIẾT KẾ KHUNG THIỆP CHUYÊN NGHIỆP SLIDE CUỐI */
-.single-image-card, .restaurant-display-card, .dark-calendar, .story-box {
-    margin-bottom: 0px;
-}
-.premium-invitation-container {
-    max-width: 550px;
-    width: 100%;
-    margin: 0 auto;
-}
-.premium-invitation-card {
-    background: rgba(18, 18, 18, 0.9) !important;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 128, 171, 0.25) !important;
-    box-shadow: 0 0 30px rgba(255, 128, 171, 0.15), inset 0 0 20px rgba(0,0,0,0.6) !important;
-    padding: 40px 35px;
-    max-width: 550px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: left;
-}
-.invitation-header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-.gold-icon {
-    font-size: 2.5rem;
-    color: #ff80ab;
-    margin-bottom: 10px;
-}
-.invitation-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #ffffff;
-    letter-spacing: 2px;
-    font-weight: 700;
-}
-.sub-invitation {
-    font-size: 0.9rem;
-    color: #777;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    display: block;
-    margin-top: 5px;
-}
-.invitation-to {
-    font-size: 1.2rem;
-    color: #e5e5e5;
-}
-.target-princess {
-    color: #ff80ab;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-}
-.invitation-details {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.info-row {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-.info-label {
-    font-size: 0.95rem;
-    color: #888;
-    font-weight: 500;
-}
-.info-label i {
-    color: #ff80ab;
-    margin-right: 6px;
-    width: 16px;
-}
-.info-value {
-    font-size: 1.15rem;
-    color: #ffffff;
-    font-weight: 400;
-    line-height: 1.4;
-}
-.invitation-promise {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #ff80ab;
-    text-align: center;
-    line-height: 1.6;
-    margin-top: 15px;
+@keyframes popUp { 0% { transform: translateY(10px) scale(0.5); opacity: 0; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+
+
+/* =======================================================
+   🌍 CƠ CHẾ 3D LÕI: QUẢ CẦU BIẾN THÀNH VŨ TRỤ TÁCH RỜI NHAU
+   ======================================================= */
+.fade-out-text { opacity: 0 !important; visibility: hidden; pointer-events: none; }
+
+.globe-wrapper {
+    position: relative;
+    width: 380px; 
+    height: 380px; 
+    margin: 10px auto 40px auto;
+    perspective: 1500px;
+    z-index: 200; 
+    touch-action: pan-y; 
 }
 
-/* Fix responsive cho thiệp mời trên điện thoại */
-@media (max-width: 768px) {
-    .premium-invitation-card {
-        padding: 25px 20px !important;
-        max-width: 310px !important;
-    }
-    .invitation-header h2 { font-size: 1.3rem !important; }
-    .gold-icon { font-size: 1.8rem !important; }
-    .invitation-to { font-size: 1rem !important; }
-    .target-princess { font-size: 1.15rem !important; }
-    .info-value { font-size: 0.95rem !important; }
-    .invitation-promise { font-size: 1rem !important; }
+.globe-rotator {
+    position: absolute;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    cursor: grab; 
 }
-/* 📸 ĐỊNH DẠNG KHUNG ẢNH CỦA BÉ YÊU TRÊN THƯ MỜI */
-.princess-photo-frame {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 20px auto;
-    border-radius: 50%; /* Bo tròn ảnh xinh xắn */
-    border: 2px solid rgba(255, 128, 171, 0.4);
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0 0 15px rgba(255, 128, 171, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+.globe-rotator:active { cursor: grabbing; } 
 
-.invitation-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Giúp ảnh không bị méo tỷ lệ dọc ngang */
+.globe-sphere {
+    position: absolute;
+    width: 100%; height: 100%;
     border-radius: 50%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Blue_Marble_2002.png/600px-Blue_Marble_2002.png') left center/cover;
+    box-shadow: inset -30px -30px 50px rgba(0,0,0,0.9), 0 0 35px rgba(74, 144, 226, 0.5);
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.5s;
+    transform: scale(1); 
+    opacity: 1;
 }
 
-/* Thu nhỏ khung ảnh mượt mà trên giao diện điện thoại */
-@media (max-width: 768px) {
-    .princess-photo-frame {
-        width: 100px !important;
-        height: 100px !important;
-        margin-bottom: 15px !important;
-    }
+.globe-items {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    pointer-events: none; 
 }
+
+/* KHUNG TỌA ĐỘ LÚC CÒN LÀ QUẢ ĐỊA CẦU */
+.globe-item {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0; 
+    transform-style: preserve-3d;
+    pointer-events: auto; 
+    --radius: 195px; /* Ép cong sát quả cầu gốc */
+    
+    transform: translateY(0px) rotateY(var(--ry)) rotateX(var(--rx)) translateZ(var(--radius));
+    transition: transform 1.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* THU NHỎ SIZE ẢNH TỪ 90px -> 80px ĐỂ CHỨA VỪA 36 TẤM KHÔNG BỊ RỐI MẮT */
+.globe-item-inner {
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    width: 80px; height: 80px; 
+    border-radius: 12px; 
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255,255,255,0.85);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    transition: all 1.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.empty-slot {
+    background: rgba(255,255,255,0.05);
+    border: 2px dashed rgba(255,255,255,0.5);
+    display: flex; justify-content: center; align-items: center;
+    color: rgba(255,255,255,0.5); backdrop-filter: blur(2px);
+}
+
+/* =======================================
+   💥 TRẠNG THÁI NỔ TUNG: BAY BAY TÁCH NHAU RA XA (EXPLODED)
+   ======================================= */
+.globe-wrapper.exploded .globe-rotator { cursor: grab; }
+.globe-wrapper.exploded .globe-rotator:active { cursor: grabbing; }
+
+.globe-wrapper.exploded .globe-sphere { transform: scale(0); opacity: 0; }
+
+.globe-wrapper.exploded .globe-item { 
+    transform: rotateY(var(--ry)) translate3d(var(--ex-tx), var(--ex-ty), var(--ex-radius)) rotateX(15deg);
+}
+
+/* Khung ảnh to ra và trôi lơ lửng tự do biên độ cao */
+.globe-wrapper.exploded .globe-item-inner {
+    width: 105px; height: 105px;
+    cursor: pointer;
+    animation: floatWild 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatWild {
+    0% { transform: translate(-50%, -50%) translate3d(0, 0, 0) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) translate3d(-15px, -25px, 15px) rotate(6deg); }
+}
+
+/* =======================================
+   ❤️ HIỆU ỨNG THẢ TIM BAY TỪ DƯỚI LÊN
+   ======================================= */
+.hearts-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: 5; }
+.floating-heart { position: absolute; bottom: -50px; color: #ff3366; opacity: 0; filter: drop-shadow(0 0 10px rgba(255, 51, 102, 0.5)); animation: floatHeartUp linear forwards; }
+@keyframes floatHeartUp { 0% { transform: translateY(0) scale(0.5) rotate(-15deg); opacity: 0; } 15% { opacity: 0.7; } 85% { opacity: 0.7; } 100% { transform: translateY(-110vh) scale(1.5) rotate(25deg); opacity: 0; } }
+
+/* =======================================
+   NÚT QUAY LẠI GÓC TRÁI TRÊN CÙNG
+   ======================================= */
+.btn-return-top-left { position: absolute; top: 30px; left: 30px; padding: 10px 22px; background: rgba(255, 128, 171, 0.15); color: #ff80ab; border: 1px solid #ff80ab; border-radius: 30px; font-size: 1.05rem; font-weight: 600; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.4s ease; font-family: 'Montserrat', sans-serif; backdrop-filter: blur(5px); z-index: 1001; box-shadow: 0 5px 15px rgba(255, 128, 171, 0.2); }
+.btn-return-top-left:hover { background: #ff80ab; color: white; }
+.btn-return-top-left.show { opacity: 1; visibility: visible; }
+
+/* =======================================
+   MODAL PHÓNG TO ẢNH FULLSCREEN MƯỢT MÀ
+   ======================================= */
+.image-viewer { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.88); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: all 0.4s ease; cursor: zoom-out; }
+.image-viewer.show { opacity: 1; visibility: visible; }
+.image-viewer-inner { width: 85%; height: 85%; background-size: contain; background-repeat: no-repeat; background-position: center; transform: scale(0.7); transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
+.image-viewer.show .image-viewer-inner { transform: scale(1); }
+
+/* THIẾT KẾ KHUNG THIỆP CHUYÊN NGHIỆP SLIDE CUỐI */
+.single-image-card, .restaurant-display-card, .dark-calendar, .story-box { margin-bottom: 0px; }
+.premium-invitation-container { max-width: 550px; width: 100%; margin: 0 auto; }
+.premium-invitation-card { background: rgba(18, 18, 18, 0.9) !important; border-radius: 16px; border: 1px solid rgba(255, 128, 171, 0.25) !important; box-shadow: 0 0 30px rgba(255, 128, 171, 0.15), inset 0 0 20px rgba(0,0,0,0.6) !important; padding: 40px 35px; max-width: 550px; width: 100%; margin: 0 auto; text-align: left; }
+.invitation-header { text-align: center; margin-bottom: 25px; }
+.gold-icon { font-size: 2.5rem; color: #ff80ab; margin-bottom: 10px; }
+.invitation-header h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #ffffff; letter-spacing: 2px; font-weight: 700; }
+.sub-invitation { font-size: 0.9rem; color: #777; text-transform: uppercase; letter-spacing: 3px; display: block; margin-top: 5px; }
+.invitation-to { font-size: 1.2rem; color: #e5e5e5; }
+.target-princess { color: #ff80ab; font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+.invitation-details { display: flex; flex-direction: column; gap: 16px; }
+.info-row { display: flex; flex-direction: column; gap: 4px; }
+.info-label { font-size: 0.95rem; color: #888; font-weight: 500; }
+.info-label i { color: #ff80ab; margin-right: 6px; width: 16px; }
+.info-value { font-size: 1.15rem; color: #ffffff; font-weight: 400; line-height: 1.4; }
+.invitation-promise { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #ff80ab; text-align: center; line-height: 1.6; margin-top: 15px; }
+.princess-photo-frame { width: 140px; height: 140px; margin: 0 auto 20px auto; border-radius: 50%; border: 2px solid rgba(255, 128, 171, 0.4); padding: 5px; background: rgba(255, 255, 255, 0.03); box-shadow: 0 0 15px rgba(255, 128, 171, 0.2); display: flex; justify-content: center; align-items: center; overflow: hidden; }
+.invitation-avatar { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
 /* =======================================================
    HỆ THỐNG RESPONSIVE CHUYỂN ĐỔI THU NHỎ TRÊN MOBILE
@@ -462,17 +225,11 @@ body {
 @media (max-width: 768px) {
     .fullscreen-section { padding: 10px !important; }
     .content-fluid { max-width: 100% !important; padding: 5px !important; }
-
-    .single-image-card, .restaurant-display-card {
-        flex-direction: column !important;
-        max-width: 100% !important;
-    }
+    .single-image-card, .restaurant-display-card { flex-direction: column !important; max-width: 100% !important; }
     .pure-img, .pure-img-rest { width: 100% !important; height: 220px !important; }
     .menu-text-box, .rest-details-box { width: 100% !important; padding: 20px 15px !important; }
-    
     .menu-text-box h3, .rest-details-box h3 { font-size: 1.3rem !important; margin-bottom: 12px !important; }
     .menu-text-box p, .rest-details-box p { font-size: 1.05rem !important; line-height: 1.7 !important; margin-bottom: 8px !important; }
-
     .main-title { font-size: 2rem !important; line-height: 1.3 !important; margin-bottom: 15px !important; }
     .section-title { font-size: 1.5rem !important; margin-bottom: 12px !important; }
     .lead-text { font-size: 1.1rem !important; line-height: 1.4 !important; }
@@ -497,4 +254,21 @@ body {
     .album-quote { font-size: 1.1rem !important; }
     .icon-heart { font-size: 2.5rem !important; margin-bottom: 15px !important; }
     .scroll-down-hint { font-size: 1.5rem !important; margin-top: 15px !important; }
+    
+    /* Responsive cho Mảng Quỹ Đạo Galaxy MỚI */
+    .btn-return-top-left { top: 15px; left: 15px; padding: 8px 15px; font-size: 0.9rem; }
+    .globe-wrapper { width: 300px; height: 300px; margin: 20px auto; } 
+    .globe-item { --radius: 155px; } 
+    .globe-item-inner { width: 60px; height: 60px; } 
+    .globe-wrapper.exploded .globe-item-inner { width: 80px; height: 80px; } 
+
+    /* Responsive cho thiệp mời */
+    .premium-invitation-card { padding: 25px 20px !important; max-width: 310px !important; }
+    .invitation-header h2 { font-size: 1.3rem !important; }
+    .gold-icon { font-size: 1.8rem !important; }
+    .invitation-to { font-size: 1rem !important; }
+    .target-princess { font-size: 1.15rem !important; }
+    .info-value { font-size: 0.95rem !important; }
+    .invitation-promise { font-size: 1rem !important; }
+    .princess-photo-frame { width: 100px !important; height: 100px !important; margin-bottom: 15px !important; }
 }
